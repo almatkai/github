@@ -1,0 +1,933 @@
+{
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.github",
+  "slug": "github",
+  "name": "GitHub",
+  "description": "Search GitHub repositories, create and merge pull requests, manage issues and Actions workflows, and track your GitHub notifications.",
+  "version": "0.1.0",
+  "author": "thomaslombart",
+  "repository": "https://github.com/almatkai/github",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "icon": "resources/assets/icon.png",
+  "runtime": "rust",
+  "execution": "process",
+  "protocolVersion": 1,
+  "minHostVersion": "0.3.0-beta.12",
+  "replaces": [
+    "raycast.github"
+  ],
+  "preferences": [
+    {
+      "name": "personalAccessToken",
+      "type": "password",
+      "required": false,
+      "title": "GitHub Token",
+      "description": "Your GitHub's personal access token. Required scopes: notifications repo project read:org read:user. Add read:packages to use the My Packages commands.",
+      "link": "https://github.com/settings/tokens",
+      "placeholder": "Enter your personal access token"
+    },
+    {
+      "name": "defaultSearchTerms",
+      "type": "textfield",
+      "required": false,
+      "title": "Default Search Terms",
+      "description": "Default search to be populated when searching issues, pull requests and discussions.",
+      "default": "author:@me"
+    },
+    {
+      "name": "numberOfResults",
+      "type": "textfield",
+      "required": false,
+      "title": "Search Results per Page",
+      "description": "For repository, issue, discussion, or pull request searches, this is the number of results requested per page. Fewer results per page will load faster.",
+      "placeholder": "25"
+    },
+    {
+      "name": "baseClonePath",
+      "type": "directory",
+      "required": false,
+      "title": "Default Clone Path",
+      "description": "Used by the 'Clone and Open' action. 'Clone with Options' starts here but lets you choose a different directory."
+    },
+    {
+      "name": "vscodeBuild",
+      "type": "dropdown",
+      "required": false,
+      "title": "VS Code Build",
+      "description": "Which editor to use for the Clone in VS Code action. Applies to Search Repositories, My Latest Repositories, and My Starred Repositories.",
+      "default": "vscode",
+      "data": [
+        {
+          "title": "VS Code",
+          "value": "vscode"
+        },
+        {
+          "title": "Cursor",
+          "value": "cursor"
+        }
+      ]
+    },
+    {
+      "name": "repositoryCloneProtocol",
+      "title": "Repository Clone Protocol",
+      "label": "Protocol for Cloning Repositories",
+      "description": "The protocol to use when cloning a repository.",
+      "type": "dropdown",
+      "required": false,
+      "default": "https",
+      "data": [
+        {
+          "title": "HTTPS",
+          "value": "https"
+        },
+        {
+          "title": "SSH",
+          "value": "ssh"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "title": "Actions",
+      "label": "Open PRs in browser by default",
+      "name": "isOpenInBrowser",
+      "description": "If checked, pull requests will be opened in the browser by default instead of viewing them within Raycast.",
+      "default": false,
+      "required": false
+    },
+    {
+      "name": "includeTeamReviewRequests",
+      "type": "checkbox",
+      "required": false,
+      "title": "Advanced",
+      "default": true,
+      "label": "PRs include team review requests",
+      "description": "Include PRs where your team's review was requested as well as your own."
+    },
+    {
+      "name": "repositoryFilterMode",
+      "type": "dropdown",
+      "required": false,
+      "default": "all",
+      "title": "Repository Filter Mode",
+      "description": "How to filter repositories",
+      "data": [
+        {
+          "title": "All Repositories",
+          "value": "all"
+        },
+        {
+          "title": "Include Only Listed Repositories",
+          "value": "include"
+        },
+        {
+          "title": "Exclude Listed Repositories",
+          "value": "exclude"
+        }
+      ]
+    },
+    {
+      "name": "repositoryList",
+      "type": "textfield",
+      "required": false,
+      "title": "Repository List",
+      "description": "Comma-separated list of repositories to include/exclude (e.g., 'owner/repo1, owner/repo2')",
+      "placeholder": "owner/repo1, owner/repo2, owner/repo3"
+    }
+  ],
+  "commands": [
+    {
+      "name": "my-pull-requests",
+      "title": "My Pull Requests",
+      "description": "List pull requests you created, participated in, or were mentioned in.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "includeAssigned",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Assigned",
+          "title": "Categories to Display",
+          "description": "Includes pull request you were assigned to in the menu list."
+        },
+        {
+          "name": "includeMentioned",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Mentioned",
+          "description": "Includes pull request you were mentioned in the menu list."
+        },
+        {
+          "name": "includeReviewRequests",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Review Requests",
+          "description": "Includes pull request you were requested to review in the menu list."
+        },
+        {
+          "name": "includeReviewed",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "label": "Reviewed",
+          "description": "Includes pull request you reviewed in the menu list."
+        },
+        {
+          "name": "includeRecentlyClosed",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "label": "Recently Closed",
+          "description": "Includes pull request you recently closed in the menu list."
+        },
+        {
+          "name": "includeDrafts",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Drafts",
+          "description": "Include draft pull requests in the list."
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "search-pull-requests",
+      "title": "Search Pull Requests",
+      "description": "Search recent pull requests globally in all repositories.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "create-pull-request",
+      "title": "Create Pull Request",
+      "description": "Create a pull request in one of your GitHub repositories.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-issues",
+      "title": "My Issues",
+      "description": "List issues created by you, assigned to you or mentioning you.",
+      "mode": "view",
+      "keywords": [
+        "open issues",
+        "created issues"
+      ],
+      "preferences": [
+        {
+          "name": "showCreated",
+          "description": "Show issues you created",
+          "type": "checkbox",
+          "required": false,
+          "label": "Created",
+          "title": "Categories to Display",
+          "default": true
+        },
+        {
+          "name": "showAssigned",
+          "description": "Show issues assigned to you",
+          "type": "checkbox",
+          "required": false,
+          "label": "Assigned",
+          "default": true
+        },
+        {
+          "name": "showMentioned",
+          "description": "Show issues where you are mentioned",
+          "type": "checkbox",
+          "required": false,
+          "label": "Mentioned",
+          "default": true
+        },
+        {
+          "name": "showRecentlyClosed",
+          "description": "Show recently closed issues",
+          "type": "checkbox",
+          "required": false,
+          "label": "Recently Closed",
+          "default": false
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "search-issues",
+      "title": "Search Issues",
+      "description": "Search recent issues globally in all repositories.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "create-issue",
+      "title": "Create Issue",
+      "description": "Create an issue in one of your GitHub repositories.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "openInBrowserAfterCreate",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "title": "After Creating",
+          "label": "Open issue in browser",
+          "description": "If checked, newly created issues will be opened in your default browser."
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "create-branch",
+      "title": "Create Branch",
+      "description": "Create a branch in one of your GitHub repositories",
+      "mode": "view",
+      "disabledByDefault": true,
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "create-release",
+      "title": "Create Release",
+      "description": "Create a release in one of your GitHub repositories.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "create-repository",
+      "title": "Create Repository",
+      "description": "Create a repository on your GitHub account or in one of your organizations",
+      "mode": "view",
+      "disabledByDefault": true,
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "search-repositories",
+      "title": "Search Repositories",
+      "description": "Search in your public or private repositories by name.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "application",
+          "type": "appPicker",
+          "required": false,
+          "title": "IDE Application",
+          "default": "/Applications/Visual Studio Code.app",
+          "placeholder": "/Applications/Visual Studio Code.app",
+          "description": "Will be used to open the cloned repository."
+        },
+        {
+          "name": "includeForks",
+          "type": "checkbox",
+          "required": false,
+          "title": "Options",
+          "default": true,
+          "label": "Include Forks",
+          "description": "Includes forked repositories in search results"
+        },
+        {
+          "name": "includeArchived",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "label": "Include Archived",
+          "description": "Includes archived repositories in search results"
+        },
+        {
+          "name": "displayOwnerName",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "label": "Display Owner Names",
+          "description": "Display owner name alongside repository name in search results"
+        },
+        {
+          "name": "disableThrottle",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "label": "Disable Throttle",
+          "description": "Disable search input throttling for immediate search on each keystroke"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-latest-repositories",
+      "title": "My Latest Repositories",
+      "description": "List your repositories by latest updated",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-starred-repositories",
+      "title": "My Starred Repositories",
+      "description": "List repositories you have starred",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-packages",
+      "title": "My Packages",
+      "description": "List packages you published to GitHub Packages",
+      "mode": "view",
+      "keywords": [
+        "container",
+        "npm",
+        "maven",
+        "docker",
+        "nuget",
+        "rubygems",
+        "registry"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "workflow-runs",
+      "title": "Workflow Runs",
+      "description": "Manage workflow runs for a selected GitHub repository.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "dispatch-workflow",
+      "title": "Dispatch Workflow",
+      "description": "Trigger a workflow_dispatch workflow in one of your GitHub repositories.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "notifications",
+      "title": "Notifications",
+      "description": "List inbox notifications from all repositories or a selected repository.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "unread-notifications",
+      "title": "Unread Notifications",
+      "description": "Shows unread notifications in the macOS menu bar.",
+      "mode": "menu-bar",
+      "interval": "15m",
+      "preferences": [
+        {
+          "type": "checkbox",
+          "label": "Always Show",
+          "name": "alwaysShow",
+          "description": "Show the menu bar extra even when you don't have any unread notifications.",
+          "default": true,
+          "required": false
+        },
+        {
+          "type": "checkbox",
+          "label": "Show unread count",
+          "name": "showUnreadCount",
+          "description": "Show the unread count in the menu bar.",
+          "default": true,
+          "required": false
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "search-discussions",
+      "title": "Search Discussions",
+      "description": "Search recent Discussions globally in all repositories",
+      "mode": "view",
+      "disabledByDefault": true,
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-discussions",
+      "title": "My Discussions",
+      "description": "Show your Discussions",
+      "mode": "view",
+      "disabledByDefault": true,
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-projects",
+      "title": "My Projects",
+      "description": "Show your Projects",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-issues-menu",
+      "title": "My Issues Menu Bar",
+      "description": "Display My Issues in the Menu Bar",
+      "mode": "menu-bar",
+      "keywords": [
+        "open issues"
+      ],
+      "interval": "15m",
+      "preferences": [
+        {
+          "name": "showtext",
+          "description": "Show issues count with menu bar icon.",
+          "type": "checkbox",
+          "required": false,
+          "label": "Show Count",
+          "title": "Appearance",
+          "default": true
+        },
+        {
+          "name": "useUnreadIndicator",
+          "description": "Show unread indicator for pull requests.",
+          "type": "checkbox",
+          "required": false,
+          "label": "Unread Indicator",
+          "default": false
+        },
+        {
+          "name": "maxitems",
+          "description": "Maximum issues shown per category.",
+          "type": "textfield",
+          "required": false,
+          "title": "Max Issues per category",
+          "placeholder": "10"
+        },
+        {
+          "name": "showCreated",
+          "description": "Show issues you created",
+          "type": "checkbox",
+          "required": false,
+          "label": "Created",
+          "title": "Categories to Display",
+          "default": true
+        },
+        {
+          "name": "showAssigned",
+          "description": "Show issues assigned to you",
+          "type": "checkbox",
+          "required": false,
+          "label": "Assigned",
+          "default": true
+        },
+        {
+          "name": "showMentioned",
+          "description": "Show issues where you are mentioned",
+          "type": "checkbox",
+          "required": false,
+          "label": "Mentioned",
+          "default": true
+        },
+        {
+          "name": "showRecentlyClosed",
+          "description": "Show recently closed issues",
+          "type": "checkbox",
+          "required": false,
+          "label": "Recently Closed",
+          "default": false
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-stats-menu",
+      "title": "My GitHub Stats Menu Bar",
+      "description": "Display your GitHub profile stats (followers, stars received, PRs, issues, commits) in the Menu Bar",
+      "mode": "menu-bar",
+      "interval": "15m",
+      "preferences": [
+        {
+          "name": "useAvatarAsIcon",
+          "description": "Show your GitHub avatar as the menu bar icon instead of the GitHub logo",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Avatar",
+          "title": "Menu Bar Icon"
+        },
+        {
+          "name": "notifyOnNewStars",
+          "description": "Show a badge in the menu bar title and a 'What's New' section when your repositories receive new stars",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Notify on new stars",
+          "title": "New Stars Notification"
+        },
+        {
+          "name": "refreshFrequency",
+          "description": "How often to refresh stats in the background. Lower values keep the data fresher but use more GitHub API quota.",
+          "type": "dropdown",
+          "required": false,
+          "default": "30m",
+          "title": "Refresh Frequency",
+          "data": [
+            {
+              "title": "15 minutes",
+              "value": "15m"
+            },
+            {
+              "title": "30 minutes",
+              "value": "30m"
+            },
+            {
+              "title": "1 hour",
+              "value": "1h"
+            },
+            {
+              "title": "2 hours",
+              "value": "2h"
+            }
+          ]
+        },
+        {
+          "name": "titleMetric",
+          "description": "The metric shown next to the menu bar icon",
+          "type": "dropdown",
+          "required": false,
+          "default": "followers",
+          "title": "Menu Bar Title",
+          "data": [
+            {
+              "title": "Followers",
+              "value": "followers"
+            },
+            {
+              "title": "Stars Received",
+              "value": "stars"
+            },
+            {
+              "title": "Open PRs",
+              "value": "prsOpen"
+            },
+            {
+              "title": "Open Issues",
+              "value": "issuesOpen"
+            },
+            {
+              "title": "Icon Only",
+              "value": "none"
+            }
+          ]
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-pull-requests-menu",
+      "title": "My Pull Requests Menu Bar",
+      "description": "Display My Pull Requests in the Menu Bar",
+      "mode": "menu-bar",
+      "interval": "15m",
+      "preferences": [
+        {
+          "name": "showtext",
+          "description": "Show pull requests count with menu bar icon.",
+          "type": "checkbox",
+          "required": false,
+          "label": "Show",
+          "title": "Icon Count",
+          "default": true
+        },
+        {
+          "name": "useUnreadIndicator",
+          "description": "Show unread indicator for pull requests.",
+          "type": "checkbox",
+          "required": false,
+          "label": "Unread Indicator",
+          "default": false
+        },
+        {
+          "name": "includeAssigned",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Assigned",
+          "title": "Categories to Display",
+          "description": "Includes pull request you were assigned to in the menu list."
+        },
+        {
+          "name": "includeMentioned",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Mentioned",
+          "description": "Includes pull request you were mentioned in the menu list."
+        },
+        {
+          "name": "includeReviewRequests",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Review Requests",
+          "description": "Includes pull request you were requested to review in the menu list."
+        },
+        {
+          "name": "includeReviewed",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "label": "Reviewed",
+          "description": "Includes pull request you reviewed in the menu list."
+        },
+        {
+          "name": "includeRecentlyClosed",
+          "type": "checkbox",
+          "required": false,
+          "default": false,
+          "label": "Recently Closed",
+          "description": "Includes pull request you recently closed in the menu list."
+        },
+        {
+          "name": "includeDrafts",
+          "type": "checkbox",
+          "required": false,
+          "default": true,
+          "label": "Drafts",
+          "description": "Include draft pull requests in the menu list."
+        },
+        {
+          "name": "maxitems",
+          "description": "Maximum pull requests shown per category.",
+          "type": "textfield",
+          "required": false,
+          "title": "Max Pull Requests per category",
+          "placeholder": "5"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "my-packages-menu",
+      "title": "My Packages Menu Bar",
+      "description": "Display My Packages in the Menu Bar",
+      "mode": "menu-bar",
+      "interval": "30m",
+      "preferences": [
+        {
+          "name": "titlePackage",
+          "description": "Show this package's name and total download count in the menu bar title. Leave empty to show the number of packages instead. GitHub publishes download counts only on public package pages, so a private package shows just its name.",
+          "type": "textfield",
+          "required": false,
+          "title": "Menu Bar Title",
+          "placeholder": "package-name"
+        },
+        {
+          "name": "showtext",
+          "description": "Show packages count with menu bar icon. Ignored when a package name is set above.",
+          "type": "checkbox",
+          "required": false,
+          "label": "Show Count",
+          "title": "Appearance",
+          "default": true
+        },
+        {
+          "name": "maxitems",
+          "description": "Maximum packages shown per package type.",
+          "type": "textfield",
+          "required": false,
+          "title": "Max Packages per Package Type",
+          "placeholder": "10"
+        }
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    },
+    {
+      "name": "download-repository",
+      "title": "Download Repository as ZIP",
+      "subtitle": "GitHub",
+      "description": "Download a repository or directory as a ZIP archive (does not create a Git clone)",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "runtime": "rust",
+      "refreshMs": null,
+      "concurrency": "reject-while-busy",
+      "timeoutMs": 55000
+    }
+  ],
+  "capabilities": [
+    "host.settings.open",
+    "host.shell.open",
+    "host.shell.openWithApp",
+    "host.shell.reveal",
+    "host.clipboard.read",
+    "host.clipboard.write",
+    "host.dialog.confirm",
+    "host.tray.set",
+    "host.tray.remove",
+    "host.background.retain",
+    "host.background.release",
+    "host.notifications.show"
+  ],
+  "files": {},
+  "artifacts": {}
+}

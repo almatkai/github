@@ -1,0 +1,1218 @@
+{
+  "commit": "dccfc8877dd0e658295cb4b6d29b4a0a1b79baf8",
+  "tree": "72f59fc69588c0bbe5ef365e2bf3b8be72ef9333",
+  "files": [
+    {
+      "path": "LICENSE",
+      "gitBlob": "be595ac54db717d018cee4500381d46b0e0d085b",
+      "gitMode": "100644",
+      "sha256": "7f727f8b20cdd0e65f84e70b9cac2fce337dcecee4dc88955eb012ea27f02755"
+    },
+    {
+      "path": "extensions/github/.gitignore",
+      "gitBlob": "5ecb8afc2ba0f9a890461a87a90ef8a16a12e45d",
+      "gitMode": "100644",
+      "sha256": "5366beb3560ba573b5a4c1b83c558589aea33b9eaafe7855d01aa82f7716ac69"
+    },
+    {
+      "path": "extensions/github/.graphqlrc.ts",
+      "gitBlob": "a128fbb2da334807bbeac32d4b5fb589983335b7",
+      "gitMode": "100644",
+      "sha256": "c97277b340300ab48706430a367519010fa9e065149d0af8f223e0f7e57ad8e4"
+    },
+    {
+      "path": "extensions/github/.prettierrc",
+      "gitBlob": "7e5f2930235605218b7624865c9c22d6e9c91b3c",
+      "gitMode": "100644",
+      "sha256": "46c74b6b4caa0b4f77081a1f8392056a7f0b0e86e2e84cdf22b10c186db087b9"
+    },
+    {
+      "path": "extensions/github/CHANGELOG.md",
+      "gitBlob": "0bf4fea408dbb27017349c2d22c3cf27ae8660bc",
+      "gitMode": "100644",
+      "sha256": "9136f84f1f5f8ef0c94550276e7745daaf705119dda92709b61664ae3bdf602f"
+    },
+    {
+      "path": "extensions/github/CONTRIBUTING.md",
+      "gitBlob": "5fad950f1500eee6202f18cd7abf5b5b7b57704d",
+      "gitMode": "100644",
+      "sha256": "f02016f31763ea02fbf30720b99c25831c20494ed316dd6126ddd33e96458d1f"
+    },
+    {
+      "path": "extensions/github/README.md",
+      "gitBlob": "b7b2399ddca6a329b828c6c428c3727943160b6f",
+      "gitMode": "100644",
+      "sha256": "c3506f8467b50079fd042fb15171331796725f393b46a04c0d258aba16cf92fc"
+    },
+    {
+      "path": "extensions/github/assets/alert.svg",
+      "gitBlob": "3c803555a12e7ea937df73570171f2e684c4cd32",
+      "gitMode": "100644",
+      "sha256": "e34a984d9bf667c88ebdc7590dfe2ba9ab060e28a117a47f51057ea62200f9f3"
+    },
+    {
+      "path": "extensions/github/assets/book.svg",
+      "gitBlob": "ced5d1774c261dda70d3e605c3e77f0c1bebee25",
+      "gitMode": "100644",
+      "sha256": "6ebe50399e7f79ba9e8701d89369dc1d0656b0bd79a226053004c0b41dc1ae32"
+    },
+    {
+      "path": "extensions/github/assets/branch.svg",
+      "gitBlob": "224f1e1f06847ef407263fffda29f374390b52c4",
+      "gitMode": "100644",
+      "sha256": "d5cc4e84f02e6dbb368316f86435447de082debb37fb896598925d15ee8c71f2"
+    },
+    {
+      "path": "extensions/github/assets/codesandbox.svg",
+      "gitBlob": "cc3c8ca022960fa0e033b28e03ba0a00b8c59060",
+      "gitMode": "100644",
+      "sha256": "bf45f60a477bed4d90bdb265b3cfc0989e1c9be72c8ab4349a5f90d9dd8fe210"
+    },
+    {
+      "path": "extensions/github/assets/comment-discussion.svg",
+      "gitBlob": "05c9f753d36b9c1e0edd372127ee9ce9d7170560",
+      "gitMode": "100644",
+      "sha256": "7c7cee82b48dd47b73cda6493d178453442ca9d6449588846643509cca41edba"
+    },
+    {
+      "path": "extensions/github/assets/commit.svg",
+      "gitBlob": "899979cd2b4fcc2ad1fd78d7f1fce199bbbd8902",
+      "gitMode": "100644",
+      "sha256": "1bcef18e3068cf376e960fb03b9364638bdf0e28718077fc870c48e36940a9c5"
+    },
+    {
+      "path": "extensions/github/assets/deepwiki.png",
+      "gitBlob": "b0356cfdfed82de90830e5bca932103da602a253",
+      "gitMode": "100644",
+      "sha256": "74a4e39b6a3790587a30a82f967b026e1dc4cf6dd02fba765103ed322182bc12"
+    },
+    {
+      "path": "extensions/github/assets/fork.svg",
+      "gitBlob": "a1b2890f403e305a0a59c7fab7600cbda46a8da2",
+      "gitMode": "100644",
+      "sha256": "ced6307277d6e70a74a49af09fc93de01fd7e35a65eb085870a9e62413fe830d"
+    },
+    {
+      "path": "extensions/github/assets/github-dev.svg",
+      "gitBlob": "bdab315f5076d79087e14ae4ce892edff8d2170f",
+      "gitMode": "100644",
+      "sha256": "b9251b6f7d6171acaba05808c4f144aa8166b07820347eb1c51a356352093d76"
+    },
+    {
+      "path": "extensions/github/assets/github-unread.svg",
+      "gitBlob": "55b52d1c635a49329f0692866ab7bb86aab9b563",
+      "gitMode": "100644",
+      "sha256": "46e103e3b165415aa30c8d9755b8b64e2201adce2390f127b5d2f27dd2824945"
+    },
+    {
+      "path": "extensions/github/assets/github.svg",
+      "gitBlob": "dfb2dc0567e63ce607261461a1bbec91965bd5d6",
+      "gitMode": "100644",
+      "sha256": "181afed338d17261d442259c6c750636fcb0b08d18f5c4fdf0207b2c924a3024"
+    },
+    {
+      "path": "extensions/github/assets/gitpod.svg",
+      "gitBlob": "3a2d8cf42ead0282260d06048b49a223fc7c9647",
+      "gitMode": "100644",
+      "sha256": "9346d051cf913426cfeda96d0531f87251a4c2e0e8c60d5fc4de3a6bf1295980"
+    },
+    {
+      "path": "extensions/github/assets/glitch.svg",
+      "gitBlob": "6dd6c91c02027881a9b3d01b4cdd23b3dbc751ab",
+      "gitMode": "100644",
+      "sha256": "f029783b944aed8a2d6f2b69f8651065bbd7afb839175ba640276372cb1678dd"
+    },
+    {
+      "path": "extensions/github/assets/icon.png",
+      "gitBlob": "3788cede3e670fe64c564cbdaedc8093b35d33eb",
+      "gitMode": "100644",
+      "sha256": "85a9ae6b913b04db278caaa3f4966fc334b21a2ab77ecae24e90cc4d57bc3fb7"
+    },
+    {
+      "path": "extensions/github/assets/icon@dark.png",
+      "gitBlob": "3af3ee5f323dc55e0af465e73323fc9fb4c4a579",
+      "gitMode": "100644",
+      "sha256": "932c09b8d258912b7efb2d1b107b77913adb892efe2f94a5cafd3f3bbe3f45cf"
+    },
+    {
+      "path": "extensions/github/assets/issue-closed.svg",
+      "gitBlob": "e0b246028f63a88e965830ae5bceec7877c35bc7",
+      "gitMode": "100644",
+      "sha256": "8d896a823cc6cf6a56fe4668d1fda5a31183c117f2c75462f77d4eda942e80c9"
+    },
+    {
+      "path": "extensions/github/assets/issue-open-unread.svg",
+      "gitBlob": "2c24f06bdaf1fce9aa25b9b6647041d6bc85a6af",
+      "gitMode": "100644",
+      "sha256": "cdcfab39a63dc39086951f36f67481ce9eec77325e994d8c7dc9c7d963d49adc"
+    },
+    {
+      "path": "extensions/github/assets/issue-open.svg",
+      "gitBlob": "8a6ad7748748f025fc797e65d08c5390acc48d2a",
+      "gitMode": "100644",
+      "sha256": "6f508e094355f8ab6730fe4cdf64843b65bc40a4400ae32f7cba4c3f46ee88f8"
+    },
+    {
+      "path": "extensions/github/assets/issue-reopened.svg",
+      "gitBlob": "fbb56c9d9c84e12ce1414980f847dfc26e63d7d0",
+      "gitMode": "100644",
+      "sha256": "9af6e99c2c978f6e262ed75521901f3031b554aa0209a47f5bd0d60df07b0797"
+    },
+    {
+      "path": "extensions/github/assets/mail.svg",
+      "gitBlob": "79c35e86100e956c6dae425d5784d97a2bdaa797",
+      "gitMode": "100644",
+      "sha256": "e0743ff1c1caf4899ea9a9bb71dabab76121d90c08232ef531e1424d32bfa36c"
+    },
+    {
+      "path": "extensions/github/assets/mentions/issue-closed.svg",
+      "gitBlob": "de23f323d5b5e0d1c951aa1d3a29ac1fc8ecae9f",
+      "gitMode": "100644",
+      "sha256": "d49a4bcc0049237f1320aad8382b09b6b00b897d95ee5610eff41ac1c199efc9"
+    },
+    {
+      "path": "extensions/github/assets/mentions/issue-open.svg",
+      "gitBlob": "47ed0da3636e63f5219571d49e5e9a2313f84108",
+      "gitMode": "100644",
+      "sha256": "197a636ae9d10912729be129918f13d2e9b284f5aa48a9e5bdc0aef241e0f23c"
+    },
+    {
+      "path": "extensions/github/assets/mentions/pull-request-closed.svg",
+      "gitBlob": "b048057fd6b2ca1d76a1902761adde1e49368b8e",
+      "gitMode": "100644",
+      "sha256": "6d252003269a75627afdfe98743273bc56a3d1cdd68225eb253fc17357a281f2"
+    },
+    {
+      "path": "extensions/github/assets/mentions/pull-request-draft.svg",
+      "gitBlob": "cc45ac59e722d60cdd62e4c2318f2e22d662cc30",
+      "gitMode": "100644",
+      "sha256": "8ae47ff60ccf4a63cebd1ab20456632ff3c6a2e6c0c392c7959d5f0e01f6a1a3"
+    },
+    {
+      "path": "extensions/github/assets/mentions/pull-request-merged.svg",
+      "gitBlob": "f89c37462fe5543805fef3187fdc897e75e44e1a",
+      "gitMode": "100644",
+      "sha256": "2f73793ce0e0581580ccc8ae51f1e6e93e9462b220658d8b46791c32b9f1cfc5"
+    },
+    {
+      "path": "extensions/github/assets/mentions/pull-request-open.svg",
+      "gitBlob": "0a2d235c1f51c2ab0397b49f0822cae37aeda49f",
+      "gitMode": "100644",
+      "sha256": "b07155d6ad97466f56a9d3f3cf0a279b5aa20197d6a260f546e3fc983cc2dd89"
+    },
+    {
+      "path": "extensions/github/assets/milestone.svg",
+      "gitBlob": "2e6534bbb9a5eebb1b888008b846380b4b9b8902",
+      "gitMode": "100644",
+      "sha256": "fb5431c20804adc246cfba55b29dafcca2ca19b64b3dcb9de75b011ccdd9301e"
+    },
+    {
+      "path": "extensions/github/assets/project.svg",
+      "gitBlob": "c40e17baffcc7ce9633a78e12ca879610bbf4620",
+      "gitMode": "100644",
+      "sha256": "98a8c05866e8383cfe5d632cebaa679804cc770c044fac4f2a3970438cc23194"
+    },
+    {
+      "path": "extensions/github/assets/pull-request-closed.svg",
+      "gitBlob": "2073fe43b3262e50a6505da37c2955d7a04d13ae",
+      "gitMode": "100644",
+      "sha256": "433accdb416ba0c9776465c8cce2a009aab118989e04afa478ecf4c081fac35a"
+    },
+    {
+      "path": "extensions/github/assets/pull-request-draft.svg",
+      "gitBlob": "efb65a5c025c37b2698eb4d4a2aa888907baa5ec",
+      "gitMode": "100644",
+      "sha256": "b90ee3b063ba10b8b79b264e0ccef5f3bea458d243e82e99744bc64260489931"
+    },
+    {
+      "path": "extensions/github/assets/pull-request-merge-queue.svg",
+      "gitBlob": "44301e79f69fe8dd844f50f8819cf120b461c2c3",
+      "gitMode": "100644",
+      "sha256": "bf514cfc5e66703537ab3b00db3ff98e98f5f8d3bac61740c4ae27f79b53844f"
+    },
+    {
+      "path": "extensions/github/assets/pull-request-merged.svg",
+      "gitBlob": "857aef2663fe1d8ca70f344f43865bcb1ef862f8",
+      "gitMode": "100644",
+      "sha256": "f9aaf34f628cdbdf3fb1a248574f7d8138a4173ad4d712630e6a68cb7b04298b"
+    },
+    {
+      "path": "extensions/github/assets/pull-request-open-unread.svg",
+      "gitBlob": "e24e4fb165a258871b1e998349c1161f7d4a1ffa",
+      "gitMode": "100644",
+      "sha256": "83cf664ced5ae629e7cb40000512f9438edf9a9b9d22b0b9e33a357207677126"
+    },
+    {
+      "path": "extensions/github/assets/pull-request-open.svg",
+      "gitBlob": "c1738586a24d36dd949a844c6d584b722c8b5ad1",
+      "gitMode": "100644",
+      "sha256": "704bbfd6fa2e663cb888ed4aee18de1f4425da64c7422c97cae4f3bf74065c4b"
+    },
+    {
+      "path": "extensions/github/assets/replit.svg",
+      "gitBlob": "39e54fd0c6c0f10b37f9b7b251dbabcbb0f607fc",
+      "gitMode": "100644",
+      "sha256": "8a1ab4d21710f50406fa060869b43f58fd59eb2a6bb4f95c4e3c81c002fac28d"
+    },
+    {
+      "path": "extensions/github/assets/skip.svg",
+      "gitBlob": "ea1a5b82e645eb90fd9b684ab8ae436bd0b22629",
+      "gitMode": "100644",
+      "sha256": "ef3119e61603ec3da74a05ff3c06268f77b7d9ee1719206b1c54b9db49128310"
+    },
+    {
+      "path": "extensions/github/assets/sourcegraph.svg",
+      "gitBlob": "59523685604849de39fa46270b71bf9018859314",
+      "gitMode": "100644",
+      "sha256": "80d39dc2eca895d9c9bf81a2b395ad607ce92da31e4e73ed9df50c785a388b5f"
+    },
+    {
+      "path": "extensions/github/assets/star-filled.svg",
+      "gitBlob": "ba8f3f41fd0d1ae182a6a5936a224699a12e4f86",
+      "gitMode": "100644",
+      "sha256": "3f4245e2e8c7e7b3037b523a0570cc9cbd0f9eac9dc60d8a0ec785246f4b6bb9"
+    },
+    {
+      "path": "extensions/github/assets/sync.svg",
+      "gitBlob": "d7cf2fd40de53c3b504b67034f8380fe61ba3ff4",
+      "gitMode": "100644",
+      "sha256": "e6cd1209062463c551de6b30f7a54f4ea36f195107bfa8007f8dcaa8be3e63bd"
+    },
+    {
+      "path": "extensions/github/assets/tag.svg",
+      "gitBlob": "e091059b2aea65ae4b514aca1cbf8bd377e1a540",
+      "gitMode": "100644",
+      "sha256": "6c009a3b4a979ae11a07c52d39935554f88c4967d3f5da066d5f7416466def33"
+    },
+    {
+      "path": "extensions/github/assets/vercel.svg",
+      "gitBlob": "4e3b0e933582c012d94ce7627a73fd4746d79c10",
+      "gitMode": "100644",
+      "sha256": "88fb3e9d686b7a165393a2b61e0e6e62c9c86288d01d5bef62955947f54f40fb"
+    },
+    {
+      "path": "extensions/github/assets/vscode.svg",
+      "gitBlob": "51ed6bd9c09b2c65c55d94629611fe6f8b417e9b",
+      "gitMode": "100644",
+      "sha256": "09553cc3887603f3f8b61d411f7ec5f21afd2aa11d391200094fa7eabe68899b"
+    },
+    {
+      "path": "extensions/github/codegen.ts",
+      "gitBlob": "433f275f4e391c30c5e98cc1898293fff34aa10c",
+      "gitMode": "100644",
+      "sha256": "68ed6a085a103473c8187ecb602cc061d41e659128ba4cf25088c4ef548db0c2"
+    },
+    {
+      "path": "extensions/github/eslint.config.js",
+      "gitBlob": "12f892e66ca4924d03ebdb213fc2df13d5b4d51d",
+      "gitMode": "100644",
+      "sha256": "655daa8e5e4f83722ccbf56143f4fefe80a82c24151a29905820f445c7545d86"
+    },
+    {
+      "path": "extensions/github/metadata/github-1.png",
+      "gitBlob": "ac1d41bd564cdc5a636768e80060401ca5fc2512",
+      "gitMode": "100644",
+      "sha256": "8411e723f4c10b8100e6a1e85774fd6d6ea6bf5947b2b2915d1123ae5896a632"
+    },
+    {
+      "path": "extensions/github/metadata/github-2.png",
+      "gitBlob": "afe8355d1bda78a4b32a2d4926f0d0bd1099ed86",
+      "gitMode": "100644",
+      "sha256": "52d05fde5b9c4f95a3c78c3ae6c502fa368897dc9db5495da0257f70e94379e7"
+    },
+    {
+      "path": "extensions/github/metadata/github-3.png",
+      "gitBlob": "ec398ef0391b74fd7edd0e736e8393b1be120e30",
+      "gitMode": "100644",
+      "sha256": "c32922a9fd3e0098117bf7005cc5b614105c2ce4d1f59839e5db536b0221e8f7"
+    },
+    {
+      "path": "extensions/github/metadata/github-4.png",
+      "gitBlob": "9f52ad6d763d0ab19b440dc8930e297d279d915d",
+      "gitMode": "100644",
+      "sha256": "9f344a1b7d8937e901c25715283547dd968106e805ffaf96861d5f6eae08458d"
+    },
+    {
+      "path": "extensions/github/metadata/github-5.png",
+      "gitBlob": "56a406806f8e851cf3e1dac498d501af438cf4a2",
+      "gitMode": "100644",
+      "sha256": "5446c5fe29d77f88b8344d246b01c36289ad2f4a39d33d6f63b7f9fd6b28f3ee"
+    },
+    {
+      "path": "extensions/github/metadata/github-6.png",
+      "gitBlob": "c5d6e9ff8242728c5937c42db2ef1f20c74acf1b",
+      "gitMode": "100644",
+      "sha256": "a0429bf74ab2a37b40173e058cb1d8f1831830e91707b3de0a3f2defdd4c3952"
+    },
+    {
+      "path": "extensions/github/metadata/github-7.png",
+      "gitBlob": "e3393ac70ded0ec3f8879b5ef777d542277e1429",
+      "gitMode": "100644",
+      "sha256": "70d8e0f6fc728da8a31472ed69e68ac0826d1e3628d67eb22c772a5a05cd4735"
+    },
+    {
+      "path": "extensions/github/package-lock.json",
+      "gitBlob": "ee2de0d0a7576bb3cc7dc55cf311a0168187e295",
+      "gitMode": "100644",
+      "sha256": "74d3df57bb61d3e5b87804aece6cabaeea075a49092e3655637ed71ad5a6b766"
+    },
+    {
+      "path": "extensions/github/package.json",
+      "gitBlob": "c2abc728f9ea3875cf1152749c7d6720c3969e84",
+      "gitMode": "100644",
+      "sha256": "760d89643b873f1eb2ac9a7fa123e5c993330881da58b551ad6151e61fb6328f"
+    },
+    {
+      "path": "extensions/github/schema/github.graphql",
+      "gitBlob": "41cb5ceb8e5f543841ffc06ef3e702be526cbd3d",
+      "gitMode": "100644",
+      "sha256": "86e8e001eb3db2469348cefd25aacf22e623d3fbeed6affddef47ad98f12a9fc"
+    },
+    {
+      "path": "extensions/github/scripts/update-graphql-schema.mjs",
+      "gitBlob": "60ddd6b49f9e1b593fe4d99531a4824ec146e91c",
+      "gitMode": "100644",
+      "sha256": "08983efe553f40500d7efb6f48643965a4cfff12253efe5eb142b632538f963d"
+    },
+    {
+      "path": "extensions/github/skills/github-pull-request-review/SKILL.md",
+      "gitBlob": "462e112c4cc89876ca9857fea46e887c024ed457",
+      "gitMode": "100644",
+      "sha256": "fe5478e88a6b05efacad17851823035c72f3d90a59a261e24df8125d41617305"
+    },
+    {
+      "path": "extensions/github/skills/github-pull-request-review/TOOLS.md",
+      "gitBlob": "d92726f14541078cfe9296a38ebacfeabc934532",
+      "gitMode": "100644",
+      "sha256": "22fc392c336b56361638cf0155d2360cf7cb3008c1b50e709aff407ed354f1a1"
+    },
+    {
+      "path": "extensions/github/skills/github-pull-request-review/UPSTREAM.md",
+      "gitBlob": "9eb15aed9bb1446643957322f85ff040c4ea478b",
+      "gitMode": "100644",
+      "sha256": "951a1dc990cdea0cf3ebfb880d2b229a6929616652f2f95b87cb144b13b7e9c3"
+    },
+    {
+      "path": "extensions/github/skills/github-pull-request-review/VALIDATION.md",
+      "gitBlob": "615e752b8a3103eb1b6254c7fdb96e3544dabbcc",
+      "gitMode": "100644",
+      "sha256": "51a044f756a03038ed50d7c263a8177159a13e7c5bee7b221a6e937a19dd939e"
+    },
+    {
+      "path": "extensions/github/src/api/branch.graphql",
+      "gitBlob": "33f6c0ce4c4f9baca17bd1dc362b36854d9bbc02",
+      "gitMode": "100644",
+      "sha256": "19eb7ba267536c8b5b0f0e351a55e21d8340a3e7672bdfaf56781843f6336b99"
+    },
+    {
+      "path": "extensions/github/src/api/discussion.graphql",
+      "gitBlob": "066e1ce6f37f547030b5fe123ffbf2b187310554",
+      "gitMode": "100644",
+      "sha256": "41c284781f6a2deb542954edfeacfc870f1c528820a37e815a463a8669abf5cc"
+    },
+    {
+      "path": "extensions/github/src/api/githubClient.ts",
+      "gitBlob": "642866af6b5074f0087bb26bd3b0b12af89c445d",
+      "gitMode": "100644",
+      "sha256": "f64351c2f0742afd898299c0ce84f06fc1e0f61a98cbca627dcd7af525b0f33b"
+    },
+    {
+      "path": "extensions/github/src/api/issue.graphql",
+      "gitBlob": "7174f8e27c0ef5b49fa3336a94dfc71503f74f2a",
+      "gitMode": "100644",
+      "sha256": "92c3371280af27f215ba12f3c9acbdf12d50d8859279c82b305a93feb30148ef"
+    },
+    {
+      "path": "extensions/github/src/api/mentions.graphql",
+      "gitBlob": "dbf4f6d1313c3427e915d20beb1a5ead4e2ccfac",
+      "gitMode": "100644",
+      "sha256": "5b799610e25e84064ef5b287d66b2da5a021d9bdea3604afa8f16d9c656c66bf"
+    },
+    {
+      "path": "extensions/github/src/api/project.graphql",
+      "gitBlob": "6bdd34adf530ec08844a826aefe707835601878d",
+      "gitMode": "100644",
+      "sha256": "dff223e758515047fa2fe1a0611598deab620f50f8cf41bb4a56064ae50991d3"
+    },
+    {
+      "path": "extensions/github/src/api/pullRequest.graphql",
+      "gitBlob": "2b7b01c104af47646f3350875ba645dec5c23279",
+      "gitMode": "100644",
+      "sha256": "ee9f744db292f0fccc0e2eb5ad0edb875549b9b212a185d0ec047729ee88ea1b"
+    },
+    {
+      "path": "extensions/github/src/api/repository.graphql",
+      "gitBlob": "06819248d097a237dee18e3e40dd98085f555f90",
+      "gitMode": "100644",
+      "sha256": "6e46135009d3b09ea2409707e560f6914020e191a74515589ce4dbae89791811"
+    },
+    {
+      "path": "extensions/github/src/api/user.graphql",
+      "gitBlob": "37a623d8af20b6078562145aef436f160b6a6cae",
+      "gitMode": "100644",
+      "sha256": "179f74018dec430deebeb359259137da054aa908f22332d65dfe5b94554dd8be"
+    },
+    {
+      "path": "extensions/github/src/api/viewerStats.graphql",
+      "gitBlob": "c000ab3789f33c10392d6dcbf13c1f55cc0a6caa",
+      "gitMode": "100644",
+      "sha256": "52b0fb06b4d426827b4d1e0977409e4544dcd26d92a759bbd73f0e62d838e4bd"
+    },
+    {
+      "path": "extensions/github/src/api/viewerStats.test.ts",
+      "gitBlob": "6d82da46d6275d56dfe842bfce42067390128996",
+      "gitMode": "100644",
+      "sha256": "dedb5b4dec3f50cfc66396308537da3e270ab2aa6ac4044a8042da027beb2570"
+    },
+    {
+      "path": "extensions/github/src/components/AddPullRequestReview.tsx",
+      "gitBlob": "f26cc3ff5d004b0d16b1ca8ef9b9323cc592fbfe",
+      "gitMode": "100644",
+      "sha256": "889f469c018478d28b62d76fc199aaec3849989139c47ea009c872ebc5f29778"
+    },
+    {
+      "path": "extensions/github/src/components/CheckoutPullRequestForm.tsx",
+      "gitBlob": "486c2222467ed8fa05ea82d1ef06cfa9fc7c4bf6",
+      "gitMode": "100644",
+      "sha256": "9b2c201f1f0273dcde3ac21138815d001e6dbc3cd3ccb598cb75119c765ca9fd"
+    },
+    {
+      "path": "extensions/github/src/components/CloneRepositoryForm.tsx",
+      "gitBlob": "93c90a8948dd2dfe13b8f26468882ea97790269c",
+      "gitMode": "100644",
+      "sha256": "392c2db6896512e19b6ccd3916053a7f5ab001dac88bc0dd25887a6f0d2b138c"
+    },
+    {
+      "path": "extensions/github/src/components/DiscussionListItem.tsx",
+      "gitBlob": "2421e2e5eb6604ce4d315367d4214b009ed40197",
+      "gitMode": "100644",
+      "sha256": "df8bb0c8c740521c55adb627a538cf5af587e6755e53f98c13e1a5bfb85483b5"
+    },
+    {
+      "path": "extensions/github/src/components/DownloadRepositoryForm.tsx",
+      "gitBlob": "645db492bc2bf04c6c657d15a19f4fd36259c2a5",
+      "gitMode": "100644",
+      "sha256": "cb2a9891b4ac2b9e295cf9021e1528c573c646f69b68de11ac2f32d4fd81c70a"
+    },
+    {
+      "path": "extensions/github/src/components/IssueActions.tsx",
+      "gitBlob": "96ed873f577605bcfc02a34f983a06bb18d82c40",
+      "gitMode": "100644",
+      "sha256": "66bbb9b4fc8c0b05f12e95a44f46fac8f06c3a0c19a765d6991b4883a91355f0"
+    },
+    {
+      "path": "extensions/github/src/components/IssueDetail.tsx",
+      "gitBlob": "65bd02876f6a1739f81f66a88e683c5a4658a8e8",
+      "gitMode": "100644",
+      "sha256": "ca599a59b27eaa9c0a382eeb2036065717b6846bfc65be7588022a3c2a13a8e7"
+    },
+    {
+      "path": "extensions/github/src/components/IssueListEmptyView.tsx",
+      "gitBlob": "b0bba5e51f70170963d4a2789ea27d5ec6574b9a",
+      "gitMode": "100644",
+      "sha256": "ac1478521d2f5c12223dbadde29f1376e7c07b6f56995297a8c3d7e712ae885c"
+    },
+    {
+      "path": "extensions/github/src/components/IssueListItem.tsx",
+      "gitBlob": "24582a6ab92f94377d6b05610afea9047f6ab39b",
+      "gitMode": "100644",
+      "sha256": "ba0b88afb7256ce6d82039a832303f90200d777f68066b80af5b6dc03b3770a0"
+    },
+    {
+      "path": "extensions/github/src/components/Menu.tsx",
+      "gitBlob": "2d7ec4d81329209c3e51114c2c5170d8a09fc71e",
+      "gitMode": "100644",
+      "sha256": "976858490b6e9fb398d0323a8ade94c23320b818fb535764a5ae87bb2ab0cc76"
+    },
+    {
+      "path": "extensions/github/src/components/NotificationActions.tsx",
+      "gitBlob": "b43336979e2f3143e6825b44da872cf69af4f190",
+      "gitMode": "100644",
+      "sha256": "6dbb6161f2c75214d3d60d4cc072b012aeba4d3b17747811f5dd64a3c06b164b"
+    },
+    {
+      "path": "extensions/github/src/components/NotificationListItem.tsx",
+      "gitBlob": "6119f7a0d00131b88c7dd2da6ac5267788ed81f5",
+      "gitMode": "100644",
+      "sha256": "3ed8d64df2fc71529bc22fc50c171cf976187aa409a2fe1c4dd635e060c44056"
+    },
+    {
+      "path": "extensions/github/src/components/PackageListEmptyView.tsx",
+      "gitBlob": "65afebd226b083448c077fe95651986bb0527b45",
+      "gitMode": "100644",
+      "sha256": "74fb620aba41e7c1ce69149bed481ced0b41e2ebd0318b64701c78cf917b51ec"
+    },
+    {
+      "path": "extensions/github/src/components/PackageListItem.tsx",
+      "gitBlob": "a721bdd1287ca0c73290b82a348f3d108cea7d56",
+      "gitMode": "100644",
+      "sha256": "9a3d1c730cdf48b8e77ab03871b55dd950e0dfdb8ed9d5e614a5fb64365d3560"
+    },
+    {
+      "path": "extensions/github/src/components/PackageTypeDropdown.tsx",
+      "gitBlob": "16652207948210dd69f0a5c88fe9909aed994585",
+      "gitMode": "100644",
+      "sha256": "d17014bd3fb2c3b0254034f9808e1168aaccb4d2358132b2b4c09a0c5699b316"
+    },
+    {
+      "path": "extensions/github/src/components/PackageVersions.tsx",
+      "gitBlob": "4e6f4bfaef28e0616b50ab4b4112e99a31e2b6d8",
+      "gitMode": "100644",
+      "sha256": "24a35d762ac38951dbad4cff8c6aa6a5995cd62c70be004706eeb657f56774b2"
+    },
+    {
+      "path": "extensions/github/src/components/ProjectActions.tsx",
+      "gitBlob": "3588fd917ddeb3ac79c2ec976f89dcca31f2de97",
+      "gitMode": "100644",
+      "sha256": "575a886b9f3bc4ce8be3a9dc569e50333a787f7f740671cf7a9a237381259ca1"
+    },
+    {
+      "path": "extensions/github/src/components/ProjectClosedDropdown.tsx",
+      "gitBlob": "c5e87285ec33c0a3b5cc8f7fb5a4137b60204b8d",
+      "gitMode": "100644",
+      "sha256": "1d72d35bff54cdae00b1ccc47d72850192dcf71200fe37fa0e514ba505a8f86f"
+    },
+    {
+      "path": "extensions/github/src/components/ProjectDetail.tsx",
+      "gitBlob": "6a9f1dd389ba0d9c18ff00f9dcff3006276ec20c",
+      "gitMode": "100644",
+      "sha256": "0a346f6e9dafae5dbac685a4131b9d7f85327e36a3ad3699bb6b0c2873081880"
+    },
+    {
+      "path": "extensions/github/src/components/ProjectListEmptyView.tsx",
+      "gitBlob": "98f750cf26475f3ebb3b7ddd559feaf359db1df2",
+      "gitMode": "100644",
+      "sha256": "5c733ff28bc4371ca41b3e7782b00985f6caeb19de0519a9c6f4ab409e0c471d"
+    },
+    {
+      "path": "extensions/github/src/components/ProjectListItem.tsx",
+      "gitBlob": "74ac2510154eeab94c444ac3f7c049cf5324e217",
+      "gitMode": "100644",
+      "sha256": "02380965c375b6b3bf964f431952a0236d270d884961f1c70e5df86588b0d586"
+    },
+    {
+      "path": "extensions/github/src/components/PullRequestActions.tsx",
+      "gitBlob": "d0c1147c29bc0c7acbb0cb27760ce4b6b05779b3",
+      "gitMode": "100644",
+      "sha256": "41d8ae9228c4fd038cdf831ee83d334123db7859af7c9051e047324daf731f0d"
+    },
+    {
+      "path": "extensions/github/src/components/PullRequestCommits.tsx",
+      "gitBlob": "d97ad8f03bb119dbba26193f6f91c50b11b9be63",
+      "gitMode": "100644",
+      "sha256": "6ec05f4930965074ac0559c6e53a8dbc3c723d9a87dccc37c0760542038fcb1e"
+    },
+    {
+      "path": "extensions/github/src/components/PullRequestDetail.tsx",
+      "gitBlob": "d6c8876e78b9e71d4843f9b7428764edb2f89d0a",
+      "gitMode": "100644",
+      "sha256": "479a6f92cb23cb1bd942822ffdac15d4a4bd8a448731f0b8fff0d4c73b2ab4c0"
+    },
+    {
+      "path": "extensions/github/src/components/PullRequestDiff.tsx",
+      "gitBlob": "08f2f07766805b5fd59496d7773273468efea76a",
+      "gitMode": "100644",
+      "sha256": "6e69104c5a2d55b67a53bf03a84a17bbdf87529a18eea9949e7a5d58796e0e2e"
+    },
+    {
+      "path": "extensions/github/src/components/PullRequestListEmptyView.tsx",
+      "gitBlob": "b6a3c1356e44a34aa7e569f2f03a605d73c0b412",
+      "gitMode": "100644",
+      "sha256": "f7c6d132cff11b1ebfcc2f4c51735e9d755c81aaae9544a35963e49b3e406028"
+    },
+    {
+      "path": "extensions/github/src/components/PullRequestListItem.tsx",
+      "gitBlob": "3ad126bf6c71e39150556d9bcf8722b8f4fb93d5",
+      "gitMode": "100644",
+      "sha256": "41ca1af37e08e7d21dd9a91859717d7aef0dd1a6d4d46199f2a3b6b5a04937af"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryActions.tsx",
+      "gitBlob": "e02a6ec2769741b6a7fa8d9be17ecca51de47678",
+      "gitMode": "100644",
+      "sha256": "78b0745fffb6972d7523d0d2ea6f5ab6f840076eae68ae7a3e79851adb7cd698"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryDiscussions.tsx",
+      "gitBlob": "f051e467b45aeff599f20db8bae7d8237a4c8975",
+      "gitMode": "100644",
+      "sha256": "3a251b71805b05f082192c5acbc3f80ccddb2cb4b59a5f3ce221fe68a1789d98"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryDropdown.tsx",
+      "gitBlob": "70df024e9fddaf5ded40a8a214c57d3c0ca053e0",
+      "gitMode": "100644",
+      "sha256": "9ec86f1417903a12da74544bf4f62e4cfca36ec1ce8e10b7d175093fc193709c"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryIssues.tsx",
+      "gitBlob": "baf025a1b389c32c29f0884dc016045bd9cc0bf4",
+      "gitMode": "100644",
+      "sha256": "7822bfc891d3b2cb0e34f8d814ae11e4d8650778df2975a4f03a6627bc5619fb"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryListEmptyView.tsx",
+      "gitBlob": "7903e3e648d39ad4cf385312d842e64cd38a32eb",
+      "gitMode": "100644",
+      "sha256": "1ad5183b783ee2235554cde3949345c3b294002f9b120270248c9353a249bbba"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryListItem.tsx",
+      "gitBlob": "af00bb2136d9c705f9ba47bb07c16f06c2148a93",
+      "gitMode": "100644",
+      "sha256": "f05be2b82c7ea603563633f80f5527f703c629a03ae4cf1fc6915b1208ac1b89"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryPullRequest.tsx",
+      "gitBlob": "9ab21927eebb8b2385960ec9bf420c1315845f6c",
+      "gitMode": "100644",
+      "sha256": "649d8be5bfeddc5794f89e6d68c78f0092b019d37154606014600d2a05ca4875"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryReadme.tsx",
+      "gitBlob": "9f01394adff296ac193c9c4dc3f63ac37643dfc6",
+      "gitMode": "100644",
+      "sha256": "3ffe04d23ce68659f6ca25a2bd45c6ec332c2b0b6e17bbc46c712068187820c5"
+    },
+    {
+      "path": "extensions/github/src/components/RepositoryReleases.tsx",
+      "gitBlob": "902353f18d5b48f537ea03ad1dcc3dcf1deb49bc",
+      "gitMode": "100644",
+      "sha256": "a01fe49cb559f1c4d0ec7028de33b086b9eda7cb44c3ac1303d0e3886124603a"
+    },
+    {
+      "path": "extensions/github/src/components/SearchRepositoryDropdown.tsx",
+      "gitBlob": "453816759a2d1e762d9225877f0b33a2355a520b",
+      "gitMode": "100644",
+      "sha256": "bf9f48653b2f0ac2f040416c12c36eaa9dd1deb6eecbfc5184e00c21da05e05a"
+    },
+    {
+      "path": "extensions/github/src/components/SortAction.tsx",
+      "gitBlob": "4cfe4c7ff880bcbd2528bc3d65e619554821f833",
+      "gitMode": "100644",
+      "sha256": "fc89c875465d4ebc505617b13f8ee2e2d00817b826713113564fed2d28a5c2f1"
+    },
+    {
+      "path": "extensions/github/src/components/WorkflowRunActions.tsx",
+      "gitBlob": "08021efdd95632c8ae77fb30ba3ae1dd75077719",
+      "gitMode": "100644",
+      "sha256": "6b29b208b0dfd0ddbbe99006f5a345881ac694e72e4f238a229b6daf71eef859"
+    },
+    {
+      "path": "extensions/github/src/components/WorkflowRunListItem.tsx",
+      "gitBlob": "f6e09ae420a1a62c9344418fc6bf9c6cd87ec46c",
+      "gitMode": "100644",
+      "sha256": "6dc211e0b1f74589654eed4897c696fde0b71dffc2012f993f7730544bb28c20"
+    },
+    {
+      "path": "extensions/github/src/create-branch.tsx",
+      "gitBlob": "9cdf3d2ce24dd91fc2d97f995d7d678ba7f0550f",
+      "gitMode": "100644",
+      "sha256": "00a70272e4e243a3e7c04b4e4beae7c83a5072cb9995513b88b32b7863dbd724"
+    },
+    {
+      "path": "extensions/github/src/create-issue.tsx",
+      "gitBlob": "050ffa91cfb4aa2a745871146e52ae75d3cfe33c",
+      "gitMode": "100644",
+      "sha256": "fcf32bbac8cf539f5de15d596304b44c606c9dc5f4893160070c9c7a52a48913"
+    },
+    {
+      "path": "extensions/github/src/create-pull-request.tsx",
+      "gitBlob": "7f1a1d64523f82e87b5405bca6ac724bead4b96a",
+      "gitMode": "100644",
+      "sha256": "7ca6cb39c49fb6339dda3d4590d27d798c3032929a2effff21a8a33d8c17b689"
+    },
+    {
+      "path": "extensions/github/src/create-release.tsx",
+      "gitBlob": "02f096693c2cdcfdce88aec0dce30d889039501c",
+      "gitMode": "100644",
+      "sha256": "9283788332e782a23f3f4fc0b35bf769cca7d02ca34d8e3049b0f3af941d91a7"
+    },
+    {
+      "path": "extensions/github/src/create-repository.tsx",
+      "gitBlob": "565f59f034ececa53575829af11e53a45da834f1",
+      "gitMode": "100644",
+      "sha256": "80357581e92ff5444d9bb8bdb37b41e9cc376befa536e6d293a81fb054519016"
+    },
+    {
+      "path": "extensions/github/src/dispatch-workflow.tsx",
+      "gitBlob": "8a68e2594e2464856eda7252d234f20e883f4df0",
+      "gitMode": "100644",
+      "sha256": "d82f925ca42f5cb7f4f5d14a583caca5226badf5128afafe56c5efe0ee6ab3d4"
+    },
+    {
+      "path": "extensions/github/src/download-repository.tsx",
+      "gitBlob": "7b154919864e2e7d1bb98a0ff37eeceba423b10c",
+      "gitMode": "100644",
+      "sha256": "2bbd5524925984c833d96ed38f0d5ff778d872b02aaacb0f9ee4b9e9b5fecb19"
+    },
+    {
+      "path": "extensions/github/src/generated/graphql.ts",
+      "gitBlob": "c244a0f330152304e6c2f288f50b91b93e238c1d",
+      "gitMode": "100644",
+      "sha256": "0a45f0d4efc820466518c1279afcf90e58fa2cd8d7b6c206e61844cd536702dc"
+    },
+    {
+      "path": "extensions/github/src/generated/schema.ts",
+      "gitBlob": "dc3adee90629847eaebc21524d28def9eac3601e",
+      "gitMode": "100644",
+      "sha256": "07dd8c86d59aff1be074973ccec4b9170431f9d744fa3ef75e30274bc1cf250d"
+    },
+    {
+      "path": "extensions/github/src/helpers/branch-search.ts",
+      "gitBlob": "4354d6fa41d8be8d1c35d2e0dc8eb47f449132ce",
+      "gitMode": "100644",
+      "sha256": "cf0f93ef2f8b14709d5c00e21b8fbf7f48a8fc0b2e41ace488b840d9043719af"
+    },
+    {
+      "path": "extensions/github/src/helpers/create-repository.ts",
+      "gitBlob": "e2c878e03b9178b3f8e339d686beacb11f815aa1",
+      "gitMode": "100644",
+      "sha256": "5e1ad8fd86494a956f225f54552a01ba56a90813467cc67dbc7aabe217ee5d8f"
+    },
+    {
+      "path": "extensions/github/src/helpers/discussion.ts",
+      "gitBlob": "428eb9f63cc2763bbeca7dd03545fd42edbb44e7",
+      "gitMode": "100644",
+      "sha256": "e199e4d44e3b0dc7650d4e19fa6e7a3ae0afac53006c88ca4ad84e7a2f02e29f"
+    },
+    {
+      "path": "extensions/github/src/helpers/download.ts",
+      "gitBlob": "4ced710e43031404a74e875cc8336612b0e7e149",
+      "gitMode": "100644",
+      "sha256": "184805371be4d76d7f7f5df8d93a4342ad5a2aed9ad8cbe197a537629bbd2753"
+    },
+    {
+      "path": "extensions/github/src/helpers/errors.ts",
+      "gitBlob": "ceb230f6deeb80f9724b2ce1cc37ed08f0899442",
+      "gitMode": "100644",
+      "sha256": "f28fbb37b1af736569b8e17f1bccb003518461cc0c1ebec03c550657ca0407b9"
+    },
+    {
+      "path": "extensions/github/src/helpers/index.ts",
+      "gitBlob": "47ad2d25f66eee393ed118f68010d5fcbb360ec0",
+      "gitMode": "100644",
+      "sha256": "3cacdfb074caaaa248cede5cb000f54576d8a4b3939fb7ea6a28462a9b3da270"
+    },
+    {
+      "path": "extensions/github/src/helpers/issue.ts",
+      "gitBlob": "1c35dcabd9ad08140910ee32251c6e4d19b3c941",
+      "gitMode": "100644",
+      "sha256": "5d01b6af70bc8f81463415ef080bdf35d978248f64cc75b3eb64f8f6ca8ad68b"
+    },
+    {
+      "path": "extensions/github/src/helpers/mentions.test.ts",
+      "gitBlob": "e0a5926415c78da0ff6e5e07a8da3018b6d59ae9",
+      "gitMode": "100644",
+      "sha256": "8a34a9993d9a3dc2965870ecf3a1272e4984aefae5fc497603d52e08719a3d5b"
+    },
+    {
+      "path": "extensions/github/src/helpers/mentions.ts",
+      "gitBlob": "9f8115744fc125fcf44883726f54b0591de97411",
+      "gitMode": "100644",
+      "sha256": "1d312d78c268546238d8160e31de9a88fcbe65274da833f82ea0d8ed420238f6"
+    },
+    {
+      "path": "extensions/github/src/helpers/notifications.ts",
+      "gitBlob": "7ef89d0b29004d57f81cb7e073efd195acfeeb0f",
+      "gitMode": "100644",
+      "sha256": "99e80874bbd41af40c3e32108aca5ece5f13a65579e6db1cd25b652f2f13a38b"
+    },
+    {
+      "path": "extensions/github/src/helpers/package-downloads.ts",
+      "gitBlob": "2d07d40bb467013df1b96b98f20e528f9b668d87",
+      "gitMode": "100644",
+      "sha256": "097394313f82ea965204825308b06c38d44cc4375c305183a74d84de7d99ac26"
+    },
+    {
+      "path": "extensions/github/src/helpers/package.ts",
+      "gitBlob": "1538402306174090dc677f84a9f20c2c0c2fba27",
+      "gitMode": "100644",
+      "sha256": "ce0a520a8152976a03d1614102b180be684f6d41cbdb1bf27e96f174dce1a4fe"
+    },
+    {
+      "path": "extensions/github/src/helpers/project.ts",
+      "gitBlob": "ca2a4af926de6697e442c395530e21297024a244",
+      "gitMode": "100644",
+      "sha256": "70398650332b30a8cb7787160aa46435aca2794b9093f267629606ddb86bb89f"
+    },
+    {
+      "path": "extensions/github/src/helpers/pull-request-checks.test.ts",
+      "gitBlob": "214b569bbf45147e1716c5e8075c882535a29464",
+      "gitMode": "100644",
+      "sha256": "0d1f44da5dafa8413ffa16f8b6db92d83f4ee9980c997700a4e299876820bd21"
+    },
+    {
+      "path": "extensions/github/src/helpers/pull-request-checks.ts",
+      "gitBlob": "8cfcfe4810f63546654389aa190aab8e16777f47",
+      "gitMode": "100644",
+      "sha256": "a36ca72ca4e3a384ed41f74f1349915f78e756ff35c472a0d6769c49239abd10"
+    },
+    {
+      "path": "extensions/github/src/helpers/pull-request.ts",
+      "gitBlob": "a31d2444a5496c3b8f7826a5deeab2b5474ad0c7",
+      "gitMode": "100644",
+      "sha256": "3033123faad70e5b9146e28544dbb851af32f0360b78de0b0da0aa2a80711f2d"
+    },
+    {
+      "path": "extensions/github/src/helpers/repository-filter.test.ts",
+      "gitBlob": "fa08678d2c1b7d57db994aff431b0b90d1e1747f",
+      "gitMode": "100644",
+      "sha256": "91504888db5397697db028324194961f5dbf48e00103deda31d1aabe5bc9488d"
+    },
+    {
+      "path": "extensions/github/src/helpers/repository-filter.ts",
+      "gitBlob": "8d728054e390dac1d40915a58d718e3a284728ce",
+      "gitMode": "100644",
+      "sha256": "d49ade08ff86f0e4841c8b2a547c761c65edd82cf19a88ea23853612181c33b1"
+    },
+    {
+      "path": "extensions/github/src/helpers/repository.ts",
+      "gitBlob": "7c4fb37441c6fc551d8d1ccdb67f3f09d995d555",
+      "gitMode": "100644",
+      "sha256": "a06751b94308ab4e8a24707d15e42f3d57b95b7a8673d4a8573cb593b50013b1"
+    },
+    {
+      "path": "extensions/github/src/helpers/scopes.ts",
+      "gitBlob": "2b07c16421c24fdef4a278d749387f4125034a43",
+      "gitMode": "100644",
+      "sha256": "0309f222727a652856b33461297e62afd064ec328f4746b8f50b63abde896705"
+    },
+    {
+      "path": "extensions/github/src/helpers/users.ts",
+      "gitBlob": "011ba7eba2e7a236a15a04cb8e3727acf939fcb8",
+      "gitMode": "100644",
+      "sha256": "5ee9449fff9f4844e53f252aaeb193a8bc1252e0146d637e7ca5363bbd887edd"
+    },
+    {
+      "path": "extensions/github/src/helpers/withGithubClient.tsx",
+      "gitBlob": "f9421899729f50bd694c488d4c888831afd7f61c",
+      "gitMode": "100644",
+      "sha256": "85a65280d469582f1c96e47be5fdea105c0e5829d060bbfb6e0e26f101ba0b31"
+    },
+    {
+      "path": "extensions/github/src/helpers/workflow-dispatch.ts",
+      "gitBlob": "ca412b9220e65beedb0b16758eaa7b86a5f651e0",
+      "gitMode": "100644",
+      "sha256": "7f268502051227c47041e3b443ffed819c23714decf8c5c0ef57b574bc2b785c"
+    },
+    {
+      "path": "extensions/github/src/helpers/workflow.ts",
+      "gitBlob": "d8a53b9f24e150681e8df1495509bab3c9351a1a",
+      "gitMode": "100644",
+      "sha256": "d796fcc40c475c50a2b9180ba523046c5321797fe7975c87db211d69b2bfb3fa"
+    },
+    {
+      "path": "extensions/github/src/hooks/useDiscussions.ts",
+      "gitBlob": "30cec574744977ddd595cda2ee2e1864ceaa026b",
+      "gitMode": "100644",
+      "sha256": "628a8fb16ac1e8b9b49838909aca3075b0e2a9d5afa74287d2e38870c3a97b1c"
+    },
+    {
+      "path": "extensions/github/src/hooks/useMyIssues.ts",
+      "gitBlob": "d733b47663b258af16b8d0959f43df60527ea8f4",
+      "gitMode": "100644",
+      "sha256": "7b9a063ec561060df796f9bee81c181b59d183ca646132618f9e006522bf3d4c"
+    },
+    {
+      "path": "extensions/github/src/hooks/useMyPackages.ts",
+      "gitBlob": "95a47f46d6d2cbc24821fc743af330bef5d8d9c6",
+      "gitMode": "100644",
+      "sha256": "6efdfdacd5d68a01c86fa162d136e178b037b43253f3668b3ebd5feaf909f61f"
+    },
+    {
+      "path": "extensions/github/src/hooks/useMyProjects.ts",
+      "gitBlob": "157f273020776fbdc7103a716497140e384196c3",
+      "gitMode": "100644",
+      "sha256": "379fd77aec928145f04b9c9861268c6b2b22a3504300c98b6a7b360d174e6922"
+    },
+    {
+      "path": "extensions/github/src/hooks/useMyPullRequests.ts",
+      "gitBlob": "14c6359b3f9a80dedd749235471a3d01fbc1cf50",
+      "gitMode": "100644",
+      "sha256": "22d298b65e5622032bfd894ee53bacea7339b5d6aa090e2328e65ba234f01c38"
+    },
+    {
+      "path": "extensions/github/src/hooks/usePackageDownloadCount.ts",
+      "gitBlob": "7d9ecb07e1b3df00da2249e2ed74c444ac9e0ee3",
+      "gitMode": "100644",
+      "sha256": "b0b8638a59dfa5d4e9bb87bda0e0423d747cddfb08a8df6cf530554c7185ad94"
+    },
+    {
+      "path": "extensions/github/src/hooks/usePackageVersions.ts",
+      "gitBlob": "101cd39560c3572307cbb7b19925f60bbe898016",
+      "gitMode": "100644",
+      "sha256": "19626bca778f5e79d2c7c67070b09d54ef6750052a0d87f94f0da929ff03abaa"
+    },
+    {
+      "path": "extensions/github/src/hooks/useRepositories.ts",
+      "gitBlob": "e3620b56f47f921b829c1823843e2e2b7e353086",
+      "gitMode": "100644",
+      "sha256": "82670100795c12213b050a94fb8dcd847aba438623a3240bb689221c34b9ba95"
+    },
+    {
+      "path": "extensions/github/src/hooks/useRepositoryBranches.ts",
+      "gitBlob": "0a3b92307db9a0579ce9c110577db9897963f215",
+      "gitMode": "100644",
+      "sha256": "16dbd18a2318e4ea5594a45c4918d7f0034a9ba21729b253a8d742a42f635905"
+    },
+    {
+      "path": "extensions/github/src/hooks/useStarsTracker.ts",
+      "gitBlob": "ef6f6e31a1c288403db932fe2dd78a1d83d23113",
+      "gitMode": "100644",
+      "sha256": "fc44b823a06e82cbca40b8231a351e054c6218754f1912e0698b963371244a83"
+    },
+    {
+      "path": "extensions/github/src/hooks/useViewer.ts",
+      "gitBlob": "ed61bc87ffe02ba38565c841c716df09694f3cf7",
+      "gitMode": "100644",
+      "sha256": "6d6c283bc74431de6186eae4c0d889bc3e1ea80347a584280b8f443b0a27d309"
+    },
+    {
+      "path": "extensions/github/src/hooks/useViewerStats.ts",
+      "gitBlob": "0a76a904680b052d34bf41fc1b505aa24e5da731",
+      "gitMode": "100644",
+      "sha256": "abbe26a4a19a1cc950bf34fb5fa17429596857efec63f7a84c56578083803cc7"
+    },
+    {
+      "path": "extensions/github/src/my-discussions.tsx",
+      "gitBlob": "bd4a38339a13cf2c238b0cafc53383cea3febb49",
+      "gitMode": "100644",
+      "sha256": "4623038eee09def6a21c4c0b112f71a8f8cb3dd5df72668a958d26681ee0c565"
+    },
+    {
+      "path": "extensions/github/src/my-issues-menu.tsx",
+      "gitBlob": "8ddcec13ff672311651351e5177b41856237e30a",
+      "gitMode": "100644",
+      "sha256": "8b308a7c6f942093c133c7cb3971707bcf68c2cf32c65c9023fdbd590b3190ac"
+    },
+    {
+      "path": "extensions/github/src/my-issues.tsx",
+      "gitBlob": "36177170ace4671f6249bb1e3ca00d9ccee51e82",
+      "gitMode": "100644",
+      "sha256": "9d4600310639d63c3386731fa12205da97def6e1cafc6f424cf9c998ae44f18c"
+    },
+    {
+      "path": "extensions/github/src/my-latest-repositories.tsx",
+      "gitBlob": "85446c4e7171f8c2b2aac65cb692bb6a0f13381c",
+      "gitMode": "100644",
+      "sha256": "62c5acdab61a6814a4b14efb391c614904a3a5ca8d53a4bd3e48228c3dce6e0d"
+    },
+    {
+      "path": "extensions/github/src/my-packages-menu.tsx",
+      "gitBlob": "d57e072d6c2ba043195423e284f1ac120ed4704a",
+      "gitMode": "100644",
+      "sha256": "5c290dcf4f76c9002d9358318f86aa73aaff3b73bdb06007ab3b944967218174"
+    },
+    {
+      "path": "extensions/github/src/my-packages.tsx",
+      "gitBlob": "8f6347ede0f1cde7e592d2d96326e7e17f49666a",
+      "gitMode": "100644",
+      "sha256": "cf6b15208b17c3d48ff0bf4b55d46dfc258c254c015af04f09e9a03cb86d9123"
+    },
+    {
+      "path": "extensions/github/src/my-projects.tsx",
+      "gitBlob": "15b46429e9ff72580be347a65eb3bf30bda48902",
+      "gitMode": "100644",
+      "sha256": "f418d10db6ca0d4a28c8e4b02cc8ce4959c0860c0e7538d7a1055037f6945ff1"
+    },
+    {
+      "path": "extensions/github/src/my-pull-requests-menu.tsx",
+      "gitBlob": "ff6e8ab3181cee244b7f19336d27a0555d6c85b2",
+      "gitMode": "100644",
+      "sha256": "d575741633041e94710db4c7b0e7070d2d7f558e631db17343bb78f4467e10d1"
+    },
+    {
+      "path": "extensions/github/src/my-pull-requests.tsx",
+      "gitBlob": "c6cd3e37d1d9d2d1a48d1adaf7232e420ef48c4f",
+      "gitMode": "100644",
+      "sha256": "f58fc48f856fda1a2c1ebfdf0d9600918a94d4ae15c59d5a45bdf8dae884ae4d"
+    },
+    {
+      "path": "extensions/github/src/my-starred-repositories.tsx",
+      "gitBlob": "f056fb8a71b58a19e48273d4cf3edd5e4439f6bc",
+      "gitMode": "100644",
+      "sha256": "059d0041d57928edb2859592195e8d6982a494bdc61d9ddca9d16c21152b1289"
+    },
+    {
+      "path": "extensions/github/src/my-stats-menu.tsx",
+      "gitBlob": "f107234ac07decfb11344a4214c3c2827afdaf6f",
+      "gitMode": "100644",
+      "sha256": "affa5cb359e8c7502e6d49615b4d694e14a55e426b515cd72c138a2ac2797650"
+    },
+    {
+      "path": "extensions/github/src/notifications.tsx",
+      "gitBlob": "a6700725fa78289ff7af6d5de6b10e0aa5e92d4f",
+      "gitMode": "100644",
+      "sha256": "62e826e55ef5b11e1ee1305db820651fcfc85418457fc5a7e893e6a183209a1f"
+    },
+    {
+      "path": "extensions/github/src/read-resource.ts",
+      "gitBlob": "aafab1f4e69c207d765c4ac0b39b6456581d8fec",
+      "gitMode": "100644",
+      "sha256": "575132e215419bc6c7e5938263bdf969c1507529e1af56a2b9bdd6a693367422"
+    },
+    {
+      "path": "extensions/github/src/search-discussions.tsx",
+      "gitBlob": "00cce5c2b8f4ba9e815edaabe6224ea21efb334a",
+      "gitMode": "100644",
+      "sha256": "810ef099e53dfcad0bd420a615a39e605dd0ed68da168061bf5be3ffe3fac8a5"
+    },
+    {
+      "path": "extensions/github/src/search-issues.tsx",
+      "gitBlob": "2555be32e373ed662382d29136b22ebd269d822c",
+      "gitMode": "100644",
+      "sha256": "545b1af2f2fa0bd5b6b22ec84a9c722ee62f5d34aaf992d1ffca7220881f8e32"
+    },
+    {
+      "path": "extensions/github/src/search-pull-requests.tsx",
+      "gitBlob": "78a0713779d027959b22c75326932e9044f54ce4",
+      "gitMode": "100644",
+      "sha256": "2fa9a455c4ff465ddc77abc991c93b6916477e1a420ac25b3f71cf457baa4d68"
+    },
+    {
+      "path": "extensions/github/src/search-repositories.tsx",
+      "gitBlob": "cbdcbaf318b24ec9f6e960c1fb8b66e61eb086f6",
+      "gitMode": "100644",
+      "sha256": "dbfeb1e4dac9edd499d05c7fe18b3fbd773bc4f8a9258c72f47816ac68a5af65"
+    },
+    {
+      "path": "extensions/github/src/tools/cancel-workflow-run.ts",
+      "gitBlob": "ce40fae7c4c989022fe243bb1313b8f9ea0398c1",
+      "gitMode": "100644",
+      "sha256": "af4575099aea85aca532500467784e6f1e9b73bc2be4a79d0277e544ed4ac56d"
+    },
+    {
+      "path": "extensions/github/src/tools/close-issue.ts",
+      "gitBlob": "d4140ba8dc0227c4a0616b5f02dad52058775fec",
+      "gitMode": "100644",
+      "sha256": "bcf90a446f079dc525f73e751c71135955ef06d8f2d502d4bb3b1ac3dcd0316a"
+    },
+    {
+      "path": "extensions/github/src/tools/close-pull-request.ts",
+      "gitBlob": "84f08f82cfa73eac38eb5bc91e4f50ebfd19e9f6",
+      "gitMode": "100644",
+      "sha256": "8eb6379d10811c4c9abec069b12b0b3fc23549ee5ffad13d55bf9cb17465169e"
+    },
+    {
+      "path": "extensions/github/src/tools/create-repository.ts",
+      "gitBlob": "c6730b5cf6fe7b8f25f4a36939f36251080316a7",
+      "gitMode": "100644",
+      "sha256": "df4a2f5bb6ae515872b35e9b1545becfb79860dd240dee19b4d97f8f8bca003c"
+    },
+    {
+      "path": "extensions/github/src/tools/disable-auto-merge.ts",
+      "gitBlob": "fee9984be9d1e3e0d59826ba52df66bf8d8fc689",
+      "gitMode": "100644",
+      "sha256": "8edd25dea71b7f54fc861baba17d1e6d816dba466b7173700a18fa40db4f2845"
+    },
+    {
+      "path": "extensions/github/src/tools/enable-auto-merge.ts",
+      "gitBlob": "1390c4a2b3717ccff3b1c1a9f6a86f5cd4a92ce0",
+      "gitMode": "100644",
+      "sha256": "24c8e358aaf4bd4f93ca74d2d66b67fdb8c206bd190d38f6fcf7c465b979471f"
+    },
+    {
+      "path": "extensions/github/src/tools/get-notifications.ts",
+      "gitBlob": "a8b63736f3ceca121185a1a1a0cd9fd1288e0f3f",
+      "gitMode": "100644",
+      "sha256": "5aae64bfb73243cc2262408945ae079900a1ee1f91efc943ebe3c06f8f816e18"
+    },
+    {
+      "path": "extensions/github/src/tools/get-pull-request-diff.ts",
+      "gitBlob": "63e2e82acf832c58d2a3853f7cdea543d869e0b6",
+      "gitMode": "100644",
+      "sha256": "0cb3bfeb03901eb4c38e30f92e79d014fe0a5403225f9d0a46b3f032ad83ea07"
+    },
+    {
+      "path": "extensions/github/src/tools/list-workflow-runs.ts",
+      "gitBlob": "e09bd50c7140a5812f932321636b61368ac46c71",
+      "gitMode": "100644",
+      "sha256": "8483b872a98c9825217d06132609857ffbfb96be8da3154800fea7ab4e13c7d8"
+    },
+    {
+      "path": "extensions/github/src/tools/merge-pull-request.ts",
+      "gitBlob": "e210196a48c11bc01c60a6893ee85c5911f84d9c",
+      "gitMode": "100644",
+      "sha256": "912240ba18adbed284b3fc295bdfd0fd3fbed09cc2b43ec85b6bac93d46ce47d"
+    },
+    {
+      "path": "extensions/github/src/tools/reopen-issue.ts",
+      "gitBlob": "7eb402d36fe25c19076268ce8d4e842e365a0547",
+      "gitMode": "100644",
+      "sha256": "f82ca326314b1073fe01415c0930d12a5115e25781e7e42fb7bc35799700cdc3"
+    },
+    {
+      "path": "extensions/github/src/tools/reopen-pull-request.ts",
+      "gitBlob": "903d85a8603e3ebed3499bda7f4eb346761f4824",
+      "gitMode": "100644",
+      "sha256": "da5bcd89b485892aac581df2c5c46ba3184663865d0c5b9558f9e19319f33bfe"
+    },
+    {
+      "path": "extensions/github/src/tools/rerun-workflow-run.ts",
+      "gitBlob": "52a4b6b6fe621aa81fcc3958cb0231b7d511315a",
+      "gitMode": "100644",
+      "sha256": "20dc752d0332dc44e24c30ae799a78c7381d2c780e0e0af9a088899899db9ecb"
+    },
+    {
+      "path": "extensions/github/src/tools/run-workflow.ts",
+      "gitBlob": "8ce81c7fceb875aacefb81e0b9c06d59321d1015",
+      "gitMode": "100644",
+      "sha256": "824f93626e13275853f3c1bd399af378934fd6d7827459d7e88c332711f221db"
+    },
+    {
+      "path": "extensions/github/src/tools/search-issue-mentions.ts",
+      "gitBlob": "0901a36f3ae1a20d52e30b56ec60e411e868d236",
+      "gitMode": "100644",
+      "sha256": "e624734b549161811f40cb1a2e2736f263db655ccbc41079edc1b6d761fbb274"
+    },
+    {
+      "path": "extensions/github/src/tools/search-issues.ts",
+      "gitBlob": "1ee0a67498ee8c7678ed9cfade0fbef7c672ff0f",
+      "gitMode": "100644",
+      "sha256": "940bb23f7c13dc268e4c1c7b3e619237f51b5f45a54d1adbbc54327d8d3b0107"
+    },
+    {
+      "path": "extensions/github/src/tools/search-pull-request-mentions.ts",
+      "gitBlob": "bb14de0181d6d593935b007c87ede8487a7a2dd5",
+      "gitMode": "100644",
+      "sha256": "559fb43e2dfec7f4a4c38e5ff759878f61453dd163ceb444080526b121b198c8"
+    },
+    {
+      "path": "extensions/github/src/tools/search-pull-requests.ts",
+      "gitBlob": "644a6738184e254e6a903f7272bf03fb78edeb24",
+      "gitMode": "100644",
+      "sha256": "4f6dc1945b2cca72a7584a4c657de18791ea8b7311860a1900db5bda46c10725"
+    },
+    {
+      "path": "extensions/github/src/tools/search-repositories.ts",
+      "gitBlob": "89d58fd9e7751eafec57b41571322806787d4584",
+      "gitMode": "100644",
+      "sha256": "bd4dc7d0b3fd2ee5a75f2bfb7cc0f2a11b1e369c517e86985aa24d7536cdaa61"
+    },
+    {
+      "path": "extensions/github/src/tools/search-repository-mentions.ts",
+      "gitBlob": "836fd36403fec71ec7c1a2715eff0bc857003c5a",
+      "gitMode": "100644",
+      "sha256": "153ec5230d1dc86f8e78183337c4af5ceb9431b9cb5990be5775c57282d43754"
+    },
+    {
+      "path": "extensions/github/src/unread-notifications.tsx",
+      "gitBlob": "f3a4cd7c4538e2ac031eb63f0ab9990422c27322",
+      "gitMode": "100644",
+      "sha256": "6df43be03b10e1fad8ec5936afacc27f1e41bbfa9d2c486cc3d070aea3888369"
+    },
+    {
+      "path": "extensions/github/src/workflow-runs.tsx",
+      "gitBlob": "48c7439fdaa8cf49cf8a6cbe162e24d4e8519dc4",
+      "gitMode": "100644",
+      "sha256": "b4d0e4b69a1c5bd9316c893166a6e999208302510f00d72689b80a4788f001b5"
+    },
+    {
+      "path": "extensions/github/tsconfig.json",
+      "gitBlob": "eb78241ce33f90e68cc82fe8eb09f6d258e1f4b9",
+      "gitMode": "100644",
+      "sha256": "fc73354651d153f5aad7f4fe986e7dda6bea178a03f8bf29c023e3426a751d8d"
+    }
+  ]
+}

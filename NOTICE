@@ -1,0 +1,7 @@
+Tezbar GitHub extension
+Adapted from the GitHub Raycast extension authored by thomaslombart and
+contributors, maintained in the Raycast Store by raycast.
+Source commit dccfc8877dd0e658295cb4b6d29b4a0a1b79baf8
+https://github.com/raycast/extensions/tree/dccfc8877dd0e658295cb4b6d29b4a0a1b79baf8/extensions/github
+The original LICENSE and any bundled skill licenses remain under licenses/.
+See licenses/THIRD_PARTY.md for the locked Rust dependency notices.

@@ -1,0 +1,4 @@
+* text=auto
+upstream/** -text
+resources/** -text
+licenses/** -text
